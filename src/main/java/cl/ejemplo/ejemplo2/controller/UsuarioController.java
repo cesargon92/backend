@@ -1,6 +1,7 @@
 package cl.ejemplo.ejemplo2.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,11 @@ public class UsuarioController {
 			return new RestResponse(HttpStatus.OK.value(), "Operación Exitosa");
 		}
 		
+	}
+	
+	@RequestMapping(value="/obtenerUsuarios", method=RequestMethod.GET)
+	public List<Usuario> obtenerUsuarios(){
+		return this.servicioUsuario.findAll();
 	}
 	
 	private boolean validador(Usuario usuario) {
