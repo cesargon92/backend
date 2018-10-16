@@ -17,7 +17,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	private int idUsaurio;
+	private Integer idUsaurio;
 	
 	@Column(name = "primer_nombre", nullable = false, length = 255)
 	private String primerNombre;
@@ -37,10 +37,10 @@ public class Usuario {
 	@Column(name = "direccion", nullable = false, length = 150)
 	private String direccion;
 	
-	public int getIdUsaurio() {
+	public Integer getIdUsaurio() {
 		return idUsaurio;
 	}
-	public void setIdUsaurio(int idUsaurio) {
+	public void setIdUsaurio(Integer idUsaurio) {
 		this.idUsaurio = idUsaurio;
 	}
 	public String getPrimerNombre() {

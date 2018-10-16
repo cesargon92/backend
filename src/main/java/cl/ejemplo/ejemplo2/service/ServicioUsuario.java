@@ -19,5 +19,11 @@ public interface ServicioUsuario {
 	 */
 	List<Usuario> findAll();
 
+	/**
+	 * método para eliminar usuario según id recibido
+	 * @param idUsaurio
+	 */
+	void deleteUser(Integer idUsaurio);
+
 
 }

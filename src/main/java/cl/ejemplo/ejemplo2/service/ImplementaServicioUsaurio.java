@@ -24,4 +24,10 @@ public class ImplementaServicioUsaurio implements ServicioUsuario {
 		return this.repositorioUsuario.findAll();
 	}
 
+	@Override
+	public void deleteUser(Integer idUsaurio) {
+		this.repositorioUsuario.deleteById(idUsaurio);
+		
+	}
+
 }
